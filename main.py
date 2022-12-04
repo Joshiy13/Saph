@@ -6,10 +6,6 @@ import os
 client = commands.Bot()
 token = os.getenv("TOKEN")
 
-for filename in os.listdir("./cogs"):
-    if filename.endswith(".py"):
-        client.load_extension(f"cogs.{filename[:-3]}")
-
 intents = discord.Intents.none()
 intents.members = True
 intents.guilds = True
@@ -17,6 +13,15 @@ intents.messages = True
 intents.reactions = True
 intents.voice_states = True
 intents.message_content = True
+
+cogs_list = [
+    "greetings",
+
+
+]
+
+for cog in cogs_list:
+    client.load_extension(f"cogs.{cog}")
 
 
 @client.event
@@ -32,11 +37,6 @@ async def status_task():
         await asyncio.sleep(10)
         await client.change_presence(activity=discord.Game(name="Coded by @joshiy13#7277"))
         await asyncio.sleep(10)
-
-
-@client.slash_command(guild_ids=[960188361874747393])
-async def ping(ctx):
-    await ctx.respond(f"Pong! {round(client.latency * 1000)}ms")
 
 
 
