@@ -11,7 +11,7 @@ class Kick(commands.Cog): # create a class for our cog that inherits from comman
     @commands.has_guild_permissions(kick_members=True)
     async def kick(self, ctx, member: discord.Member=None, reason=None):
         await member.kick()
-        await ctx.respond(f'User has been kicked for {reason}')
+        await ctx.respond(f'User has been kicked for {reason}!')
 
 def setup(bot): 
     bot.add_cog(Kick(bot)) # this is how we add our cog to the bot
