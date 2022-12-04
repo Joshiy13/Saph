@@ -16,6 +16,8 @@ intents.message_content = True
 
 cogs_list = [
     "greetings",
+    "ping",
+
 
 
 ]
