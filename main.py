@@ -18,7 +18,6 @@ intents.voice_states = True
 cogs_list = [
     "ping",
     "test",
-    "kick",
 ]
 
 for cog in cogs_list:
