@@ -17,9 +17,7 @@ intents.message_content = True
 cogs_list = [
     "greetings",
     "ping",
-
-
-
+    "test",
 ]
 
 for cog in cogs_list:
@@ -41,12 +39,10 @@ async def status_task():
         await asyncio.sleep(10)
 
 
-
 #Fügt einen Slash command hinzu
 @client.slash_command(name="test", description="Tests if the Bot is running", guild_ids=[960188361874747393]) # test server guild id must be changed before deployment
 async def first_slash(ctx): 
     await ctx.respond("Test completed!")
-
 
 
 client.run(token) #runnt den bot
