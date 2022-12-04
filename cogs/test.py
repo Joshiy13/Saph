@@ -8,7 +8,7 @@ class Test(commands.Cog): # create a class for our cog that inherits from comman
         self.bot = bot
     
     @discord.slash_command(name="test", description="Just a check if the Bot is running") # we can also add application commands
-    async def goodbye(self, ctx):
+    async def test(self, ctx):
         await ctx.respond('Test completed!')
 
 def setup(bot): 

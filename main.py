@@ -1,5 +1,4 @@
 import os
-os.system("pip install py-cord==2.0.0b1")
 import discord
 from discord.ext import commands
 import asyncio
@@ -14,12 +13,11 @@ intents.guilds = True
 intents.messages = True
 intents.reactions = True
 intents.voice_states = True
-intents.message_content = True
 
 cogs_list = [
-    "greetings",
     "ping",
     "test",
+    "kick",
 ]
 
 for cog in cogs_list:
