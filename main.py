@@ -19,6 +19,7 @@ cogs_list = [
     "ping",
     "test",
     "help",
+    "lineup",
 ]
 
 for cog in cogs_list:
