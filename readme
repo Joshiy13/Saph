@@ -2,4 +2,3 @@ Val-Bot is a Discord bot that helps navigating around the [Server name here] dis
 Features:
 /test #Developer command to see if the bot is working
 /ping #Shows the latency of the bot
-/kick #Kicks a user
