@@ -6,8 +6,7 @@ import asyncio
 
 
 client = commands.Bot()
-token = os.getenv("TOKEN")
-
+token = "MTA0ODI5NjkwNDc5MTk2NTgxOQ.GTlzdM.gYl-kPTXIiOZUVJlIXoH9sE3vOOieKEf3SgnKg"
 intents = discord.Intents.none()
 intents.members = True
 intents.guilds = True
@@ -58,6 +57,8 @@ async def status_task():
         await client.change_presence(activity=discord.Game(name="/help"))
         await asyncio.sleep(10)
         await client.change_presence(activity=discord.Game(name="Coded by @joshiy13#7277"))
+        await asyncio.sleep(10)
+        await client.change_presence(activity=discord.Game(name="DM to submit lineups"))
         await asyncio.sleep(10)
 
 
