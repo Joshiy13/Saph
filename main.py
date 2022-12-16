@@ -6,7 +6,7 @@ import asyncio
 
 
 client = commands.Bot()
-token = "MTA0ODI5NjkwNDc5MTk2NTgxOQ.GTlzdM.gYl-kPTXIiOZUVJlIXoH9sE3vOOieKEf3SgnKg"
+token = os.getenv("TOKEN")
 intents = discord.Intents.none()
 intents.members = True
 intents.guilds = True
