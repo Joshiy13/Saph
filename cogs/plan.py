@@ -10,13 +10,14 @@ class Plan(commands.Cog):
         name="plan",
         description="Plan an Event. Usage: /plan <title(scrim or official)> <date(dd/mm/yyyy)> <time(hh:mm)>",
     )
-    async def Lineup(self, ctx, title=None, date=None, time=None):
+    async def Plan(self, ctx, title=None, date=None, time=None):
         plan = discord.Embed(title="Game found!", color=0xfa0505)
         plan.add_field(name="Scrim or Match?", value=f"{title}", inline=False)
         plan.add_field(name="Date of Game:", value=f"{date}", inline=False)
         plan.add_field(name="Time of Game:", value=f"{time} CET", inline=False)
 
         channel = self.bot.get_channel(1110214530686001192)
+        player_role_id = 1110224948334694441
         manager_role_id = 1110220807562600538
 
         # Check if the command invoker has the manager role
@@ -27,7 +28,14 @@ class Plan(commands.Cog):
         if title is None or date is None or time is None:
             await ctx.respond("Please enter a title!")
         else:
-            await channel.send(embed=plan)
+            guild = ctx.guild
+            player_role = guild.get_role(player_role_id)
+            mention = player_role.mention if player_role else "@player-role"
+            content = f"{mention}"
+
+            message = await channel.send(content=content, embed=plan)  # Send content and embed
+            await message.add_reaction("✅")  # Add checkmark reaction
+            await message.add_reaction("❌")  # Add red cross reaction
             await ctx.respond("Game planned!")
 
 
