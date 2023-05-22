@@ -26,7 +26,7 @@ class Plan(commands.Cog):
             return
 
         if title is None or date is None or time is None:
-            await ctx.respond("Please enter a title!")
+            await ctx.respond("Please enter all arguments!")
         else:
             guild = ctx.guild
             player_role = guild.get_role(player_role_id)
