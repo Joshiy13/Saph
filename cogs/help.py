@@ -5,6 +5,7 @@ help = discord.Embed(title="Help Page", color=0xfa0505)
 help.add_field(name="/help", value="Shows this page", inline=False)
 help.add_field(name="/ping", value="Shows the latency of this Bot", inline=False)
 help.add_field(name="/src", value="Shows the source code of this Bot", inline=False)
+help.add_field(name="/plan", value="Plan an Event", inline=False)
 
 
 

@@ -17,6 +17,7 @@ cogs_list = [
     "ping",
     "help",
     "src",
+    "plan"
 ]
 
 for cog in cogs_list:
