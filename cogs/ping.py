@@ -2,15 +2,21 @@ import discord
 from discord.ext import commands
 
 
+
 class Ping(commands.Cog): # create a class for our cog that inherits from commands.Cog
     # this class is used to create a cog, which is a module that can be added to the bot
 
     def __init__(self, bot): # this is a special method that is called when the cog is loaded
         self.bot = bot
     
+
+
     @discord.slash_command(name="ping", description="Shows the latency of the bot") # test server guild id must be changed before deployment
     async def ping(self, ctx):
-        await ctx.respond(f"Latency: {round(self.bot.latency * 1000)}ms")
+        ping = discord.Embed(title=f"Ping: {round(self.bot.latency * 1000)} ms", color=0xfa0505)
+        await ctx.respond(embed = ping)
+
+
 
 
 def setup(bot): 
