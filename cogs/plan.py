@@ -8,7 +8,7 @@ class Plan(commands.Cog):
 
     @commands.slash_command(
         name="plan",
-        description="Plan an Event. Usage: /plan <title(scrim or official)> <date(dd/mm/yyyy)> <time(hh:mm)>",
+        description="Plan an Event. Usage: /plan <title(scrim or official)> <date(dd/mm/yyyy)> <time>",
     )
     async def Plan(self, ctx, title=None, date=None, time=None):
         plan = discord.Embed(title="Game found!", color=0xfa0505)
