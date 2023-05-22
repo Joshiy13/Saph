@@ -15,10 +15,7 @@ intents.voice_states = True
 
 cogs_list = [
     "ping",
-    "test",
     "help",
-    "lineup",
-    "submit",
 ]
 
 for cog in cogs_list:
@@ -31,25 +28,6 @@ async def on_ready():
     print("Bot is ready!")
 
 
-@client.event
-async def on_message(message):
-    if message.guild is None:
-        if message.author != client.user:
-            if message.attachments:
-                attachment = message.attachments[0]
-                if attachment.filename.endswith(('.jpg', '.jpeg', '.png', '.gif', '.mp4', '.avi', '.mkv')):
-                    await message.channel.send(f"Thanks for the file {message.author.mention}! I'll send it to the server.")
-                    await attachment.save(attachment.filename)
-                    message_text = f"{message.author.mention} sends: {message.content}"
-                    channel = client.get_channel(1053337652939739196)
-                    await channel.send(message_text, file=discord.File(attachment.filename))
-                    os.remove(attachment.filename)
-                else:
-                    # File type is not supported, send a message back to the user
-                    await message.channel.send(f"Sorry {message.author.mention}, only image and video file types are supported.")
-
-
-
 #Fügt den Status des Bots hinzu
 async def status_task():
     while True:
@@ -57,9 +35,6 @@ async def status_task():
         await asyncio.sleep(10)
         await client.change_presence(activity=discord.Game(name="Coded by @joshiy13#7277"))
         await asyncio.sleep(10)
-        await client.change_presence(activity=discord.Game(name="DM to submit lineups"))
-        await asyncio.sleep(10)
-
 
 
 client.run(token) #runnt den bot

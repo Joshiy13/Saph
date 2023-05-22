@@ -3,9 +3,7 @@ from discord.ext import commands
 
 help = discord.Embed(title="Help Page", color=0xfa0505)
 help.add_field(name="/help", value="Shows this page", inline=False)
-help.add_field(name="/lineup [Map] [Agent] ", value="Brings you to a channel where you can check the lineups you need", inline=False)
 help.add_field(name="/ping", value="Shows the latency of this Bot", inline=False)
-help.add_field(name="/submit", value="Shows you how to submit Lineups", inline=False)
 
 
 
