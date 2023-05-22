@@ -16,6 +16,7 @@ intents.voice_states = True
 cogs_list = [
     "ping",
     "help",
+    "src",
 ]
 
 for cog in cogs_list:

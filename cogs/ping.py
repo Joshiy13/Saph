@@ -15,4 +15,3 @@ class Ping(commands.Cog): # create a class for our cog that inherits from comman
 
 def setup(bot): 
     bot.add_cog(Ping(bot)) # this is how we add our cog to the bot
-
