@@ -31,7 +31,7 @@ async def on_ready():
     print("Bot is ready!")
 
 
-#Fügt den Status des Bots hinzu
+
 async def status_task():
     while True:
         await client.change_presence(activity=discord.Game(name="/help"))
@@ -40,4 +40,4 @@ async def status_task():
         await asyncio.sleep(10)
 
 
-client.run(token) #runnt den bot
+client.run(token) 
