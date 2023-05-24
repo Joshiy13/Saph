@@ -18,7 +18,8 @@ cogs_list = [
     "help",
     "src",
     "plan",
-    "tictactoe",
+    "coinflip",
+    "tictactoe"
 ]
 
 for cog in cogs_list:
