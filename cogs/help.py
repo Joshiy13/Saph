@@ -6,6 +6,9 @@ help.add_field(name="/help", value="Shows this page", inline=False)
 help.add_field(name="/ping", value="Shows the latency of this Bot", inline=False)
 help.add_field(name="/src", value="Shows the source code of this Bot", inline=False)
 help.add_field(name="/plan", value="Plan an Event", inline=False)
+help.add_field(name="/coinflip", value="Flip a Coin", inline=False)
+help.add_field(name="/tictactoe", value="Play Tic Tac Toe against someone", inline=False)
+help.add_field(name="/rps", value="Play Rock Paper Scissors against the Bot", inline=False)
 
 
 
