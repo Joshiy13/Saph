@@ -21,22 +21,29 @@ class Rps(commands.Cog):
             await ctx.respond(f"You chose {pick} and I chose {bot_choice}.")
             if pick.lower() == bot_choice:
                 await ctx.send("It's a tie!")
+                return
             elif pick.lower() == "rock":
                 if bot_choice == "paper":
                     await ctx.send("I win!")
+                    return
                 else:
                     await ctx.send("You win!")
+                    return
             elif pick.lower() == "paper":
                 if bot_choice == "scissors":
                     await ctx.send("I win!")
+                    return
                 else:
                     await ctx.send("You win!")
+                    return
             elif pick.lower() == "scissors":
                 if bot_choice == "rock":
                     await ctx.send("I win!")
+                    return
                 else:
                     await ctx.send("You win!")
             return
+            
 
 def setup(bot):
     bot.add_cog(Rps(bot))

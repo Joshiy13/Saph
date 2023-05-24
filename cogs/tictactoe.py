@@ -114,6 +114,7 @@ class TicTacToeCog(commands.Cog):
     def cleanup_game(self, guild_id: int):
         if guild_id in self.active_games:
             del self.active_games[guild_id]
+        return
 
     @commands.slash_command(name="ttt", description="Play Tic Tac Toe")
     async def tictactoe(self, ctx):
