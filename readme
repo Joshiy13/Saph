@@ -1,1 +1,9 @@
-SAPH is a Discord bot made for The Sapphires. The bot helps with planning of Scrims and other Events. Other features coming soon. If you find any weird references its because i skidded like half of the code from my other bot. I will fix it soon (jk im lazy)
+SAPH is a discord bot made for Team Sapphire a Premier Valorant Team. SAPH has the following features:
+
+- /help to show all commands
+- /plan for planning events like scrims
+- /ping to send the latency of the bot
+- /src to show the source code
+- /tictactoe to play Tic Tac Toe against the Bot
+- /coinflip to flip a coin
+- /rps to play Rock Paper Scissors
