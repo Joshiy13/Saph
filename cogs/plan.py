@@ -18,9 +18,9 @@ class Plan(commands.Cog):
         plan.add_field(name="Number of Games:", value=f"{games}", inline=False)
         plan.add_field(name="Maps:", value=f"{maps}", inline=False)
 
-        channel = self.bot.get_channel(1110214530686001192)
-        player_role_id = 1110224948334694441
-        manager_role_id = 1110220807562600538
+        channel = self.bot.get_channel(1110213677702979734)
+        player_role_id = 945243307355824188
+        manager_role_id = 1107058962337108009
 
         # Check if the command invoker has the manager role
         if discord.utils.get(ctx.author.roles, id=manager_role_id) is None:
