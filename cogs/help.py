@@ -9,19 +9,18 @@ help.add_field(name="/plan", value="Plan an Event", inline=False)
 help.add_field(name="/coinflip", value="Flip a Coin", inline=False)
 help.add_field(name="/tictactoe", value="Play Tic Tac Toe against someone", inline=False)
 help.add_field(name="/rps", value="Play Rock Paper Scissors against the Bot", inline=False)
+help.add_field(name="/meme", value="Shows a random meme", inline=False)
 
 
 
-class Help(commands.Cog): # create a class for our cog that inherits from commands.Cog
-    # this class is used to create a cog, which is a module that can be added to the bot
-
-    def __init__(self, bot): # this is a special method that is called when the cog is loaded
+class Help(commands.Cog):
+    def __init__(self, bot):
         self.bot = bot
     
-    @discord.slash_command(name="help", description="Use this command to get help") # test server guild id must be changed before deployment
+    @discord.slash_command(name="help", description="Use this command to get help")
     async def ping(self, ctx):
         await ctx.respond(embed=help)
 
 
 def setup(bot): 
-    bot.add_cog(Help(bot)) # this is how we add our cog to the bot
+    bot.add_cog(Help(bot))
