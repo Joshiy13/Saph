@@ -20,7 +20,8 @@ cogs_list = [
     "plan",
     "coinflip",
     "tictactoe",
-    "rps"
+    "rps",
+    "meme",
 ]
 
 for cog in cogs_list:

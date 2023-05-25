@@ -35,9 +35,9 @@ class Plan(commands.Cog):
             mention = player_role.mention if player_role else "@player-role"
             content = f"{mention}"
 
-            message = await channel.send(content=content, embed=plan)  # Send content and embed
-            await message.add_reaction("✅")  # Add checkmark reaction
-            await message.add_reaction("❌")  # Add red cross reaction
+            message = await channel.send(content=content, embed=plan)
+            await message.add_reaction("✅")  
+            await message.add_reaction("❌")  
             await ctx.respond("Game planned!")
 
 

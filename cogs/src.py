@@ -2,16 +2,15 @@ import discord
 from discord.ext import commands
 
 
-class Src(commands.Cog): # create a class for our cog that inherits from commands.Cog
-    # this class is used to create a cog, which is a module that can be added to the bot
+class Src(commands.Cog):
 
-    def __init__(self, bot): # this is a special method that is called when the cog is loaded
+    def __init__(self, bot):
         self.bot = bot
     
-    @discord.slash_command(name="src", description="Shows the source code of SAPH") # test server guild id must be changed before deployment
+    @commands.slash_command(name="src", description="Shows the source code of SAPH")
     async def src(self, ctx):
         await ctx.respond("https://github.com/Joshiy13/Saph")
 
 
 def setup(bot): 
-    bot.add_cog(Src(bot)) # this is how we add our cog to the bot
+    bot.add_cog(Src(bot))
