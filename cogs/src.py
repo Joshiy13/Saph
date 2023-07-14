@@ -9,7 +9,7 @@ class Src(commands.Cog):
     
     @commands.slash_command(name="src", description="Shows the source code of SAPH")
     async def src(self, ctx):
-        await ctx.respond("https://github.com/Joshiy13/Saph")
+        await ctx.respond("https://github.com/Joshiy13/Ascendence")
 
 
 def setup(bot): 
